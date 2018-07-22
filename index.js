@@ -10,15 +10,18 @@ var keystone = require('keystone');
 // and documentation.
 
 keystone.init({
-	'name': 'Meal Logger API',
-	'brand': 'Meal Logger API',
+	name: 'Meal Logger API',
+	brand: 'Meal Logger API',
 
-	'static': 'public',
-	'favicon': 'public/favicon.ico',
+	host: process.env.HOST,
+	port: process.env.PORT,
+
+	static: 'public',
+	favicon: 'public/favicon.ico',
 
 	'auto update': true,
-	'session': true,
-	'auth': true,
+	session: true,
+	auth: true,
 	'user model': 'User',
 });
 
