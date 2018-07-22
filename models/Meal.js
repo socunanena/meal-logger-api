@@ -15,6 +15,7 @@ var Meal = new keystone.List('Meal', {
 Meal.add({
   date: { type: Types.Datetime, required: true, initial: true },
   content: { type: Types.Textarea, required: true, initial: true },
+  images: { type: Types.CloudinaryImages, folder: 'meal-logger' },
 });
 
 /**
